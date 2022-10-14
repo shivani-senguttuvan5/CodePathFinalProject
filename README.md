@@ -104,9 +104,6 @@ The scope of the app is pretty well defined to the point where we can add comple
 
 ![](https://i.imgur.com/4enM4HJ.jpg)
 
-
-<img src="YOUR_WIREFRAME_IMAGE_URL" width=600>
-
 ### [BONUS] Digital Wireframes & Mockups
 
 ### [BONUS] Interactive Prototype
