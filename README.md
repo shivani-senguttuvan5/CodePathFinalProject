@@ -1,4 +1,4 @@
-Original App Design Project - README Template
+[](https://)Original App Design Project - README Template
 
 
 
@@ -104,15 +104,160 @@ The scope of the app is pretty well defined to the point where we can add comple
 
 ![](https://i.imgur.com/4enM4HJ.jpg)
 
+
+<img src="YOUR_WIREFRAME_IMAGE_URL" width=600>
+
 ### [BONUS] Digital Wireframes & Mockups
 
 ### [BONUS] Interactive Prototype
 
 ## Schema 
-[This section will be completed in Unit 9]
+
+
 ### Models
-[Add table of models]
+| Property      | Type     | Description |
+   | ------------- | -------- | ------------|
+   | objectId      | String   | unique id for the user post (default field) |
+   | author        | Pointer to User| image author |
+   | image         | File     | image that user posts |
+   | caption       | String   | image caption by author |
+   | commentsCount | Number   | number of comments that has been posted to an image |
+   | likesCount    | Number   | number of likes for the post |
+   | createdAt     | DateTime | date when post is created (default field) |
+   | calendarTracking | Dictionary[DateTime:"String"]  | user has their assignments tracked as a dictionary with keys as the days of the month where the assignments are they values for those keys |
+
 ### Networking
-- [Add list of network requests by screen ]
-- [Create basic snippets for each Parse network request]
-- [OPTIONAL: List endpoints if using existing API such as Yelp]
+
+<!-- * Launch Screen
+    * Login or Registration Screen or goes straight home if already logged in 
+* Login Screen
+    * Home/Stream to see all posts
+* Registration Screen
+    * Home/Stream to see all posts
+* Stream Screen
+    * User can go their profile, post or "??search???"
+* Post/Upload Screen
+    * Home/Stream to see all posts 
+* Profile Screen
+    * Home/Stream or Logout from their account 
+ -->- 
+ TODO: [Create basic snippets for each Parse network request]
+   - Registration Scrren
+       - **Shivani** (Create/POST) Create new user object that has username, password, email and assignments as values logged 
+
+    let user = PFObject(className:"appUser")
+    user.setUsername(username)
+    user.setUsername(password)
+    user.setUsername(email)
+    user.saveInBackground {
+      (success: Bool, error: Error?) in
+      if (success) {
+        print("Successfully added!")
+      } else {
+        print("Error, didn't add.")
+      }
+    }
+   - Stream Screen
+      - (Read/GET) Query all posts 
+      - **Giang**(Create/POST) Create a new like on a post
+
+```
+let likes = PFObject(className:"Likes")
+likes.incrementKey("like")
+likes.saveInBackground {
+  (success: Bool, error: Error?) in
+  if (success) {
+    print("Successfully upvote!")
+  } else {
+    print("Error, didn't upvote.")
+  }
+}
+```
+
+  - **Giang**(Delete) Delete existing like
+
+```
+likes.decrementKey("like")
+likes.saveInBackground {
+  (success: Bool, error: Error?) in
+  if (success) {
+    print("Successfully unlike!")
+  } else {
+    print("Error, number of like is not updated.")
+  }
+}
+```
+
+  - (Create/POST) Create a new comment on a post
+  - **Shivani** (Delete) Delete existing comment
+
+    ```
+    let didDelete = deleteObject(user)
+    didDelete.saveInBackground {
+      (success: Bool, error: Error?) in
+      if (success) {
+        print("Comment deleted!")
+      } else {
+        print("Comment was not deleted!")
+      }
+    }
+
+- Post/Upload Screen
+   - **Giang**(Create/POST) Create a new post object
+    
+```
+let posts = PFObject(className:"Posts")
+posts["author"] = PFUser.current()
+posts["caption"] = "This is the caption"
+let imageData = imageView.image!.pngData()
+let file = PFFileObject(name: "image.png", data: imageData!)
+posts["image"] = file
+posts.saveInBackground { (succeeded, error)  in
+    if (succeeded) {
+        print("Post saved!")
+    } else {
+print("Error. Post isn't saved!")
+    }
+}
+```
+
+    
+    
+   - Profile Screen
+      - **DIEGO**(Read/GET) Query logged in user object
+      -
+     
+```
+var query = PFUser.query()
+query.whereKey(USERNAME_KEY equalTo:username)
+query.getFirstObjectInBackgroundWithBlock {
+(user, error)
+}
+    if user != nil{
+       //The user has been found
+       PFUser nameOfTheUser = (PFUser *)object;
+    }
+    
+    
+    else {
+    print("Error:  \(error?.localizedDescription)")
+    }
+```
+
+- **DIEGO**(Update/PUT) Update user profile image
+```
+let posts = PFObject(className:"ProfileImages")
+posts["author"] = PFUser.current()
+let imageData = imageView.image!.pngData()
+let file = PFFileObject(name: "image.png", data: imageData!)
+posts["image"] = file
+posts.saveInBackground { (succeeded, error)  in
+    if (succeeded) {
+        print("Post saved!")
+    } else {
+print("Error. Post isn't saved!")
+    }
+}
+```
+
+- **DIEGO**: (Read/GET) Query logged calendarTracking to be displayed (TBD: optional user stories)
