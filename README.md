@@ -167,9 +167,9 @@ likes.incrementKey("like")
 likes.saveInBackground {
   (success: Bool, error: Error?) in
   if (success) {
-    print("Successfully upvote!")
+    print("Successfully like!")
   } else {
-    print("Error, didn't upvote.")
+    print("Error, number of like is not updated.")
   }
 }
 ```
