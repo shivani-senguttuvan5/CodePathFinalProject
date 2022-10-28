@@ -6,9 +6,9 @@
 
 ## Table of Contents
 1. [Overview](#Overview)
-1. [Product Spec](#Product-Spec)
-1. [Wireframes](#Wireframes)
-2. [Schema](#Schema)
+2. [Product Spec](#Product-Spec)
+3. [Wireframes](#Wireframes)
+4. [Schema](#Schema)
 
 ## Overview
 ### Description
@@ -158,7 +158,18 @@ The scope of the app is pretty well defined to the point where we can add comple
       }
     }
    - Stream Screen
-      - (Read/GET) Query all posts 
+      - **Roselle** (Read/GET) Query all posts 
+```
+let query = PFQuery(className:"Posts")
+query.getObjectInBackground(withId: "xWMyZEGZ") { (posts, error) in
+    if error == nil {
+        // Success!
+    } else {
+        // Fail!
+    }
+}
+
+```
       - **Giang**(Create/POST) Create a new like on a post
 
 ```
@@ -186,9 +197,28 @@ likes.saveInBackground {
     print("Error, number of like is not updated.")
   }
 }
+
 ```
 
-  - (Create/POST) Create a new comment on a post
+  - **Roselle** (Create/POST) Create a new comment on a post
+
+```
+let myPost = PFObject(className:"Post")
+myPost["title"] = "I'm Hungry"
+myPost["content"] = "Where should we go for lunch?"
+
+// Create the comment
+let myComment = PFObject(className:"Comment")
+myComment["content"] = "Let's do Sushirrito."
+
+// Add a relation between the Post and Comment
+myComment["post"] = myPost
+
+// This will save both myPost and myComment
+myComment.saveInBackground()
+
+```
+
   - **Shivani** (Delete) Delete existing comment
 
     ```
