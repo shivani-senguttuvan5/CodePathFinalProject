@@ -53,7 +53,7 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
         //use AB foundation for camera & third party library to embbed custom cameras
         
         if UIImagePickerController.isSourceTypeAvailable(.camera){
-            picker.sourceType = .camera
+            picker.sourceType = .photoLibrary
         } else {
             picker.sourceType = .photoLibrary
             //might be able to use photo from library
