@@ -6,7 +6,7 @@
 
 ##  Video Walkthrough Milestone 1
 
-<img src='http://g.recordit.co/BNM7aWtKFP.gif' title='Video Walkthrough Milestone 1' width='' alt='Video Walkthrough' />
+<img src='http://g.recordit.co/6KGcC9pTI9.gif' title='Video Walkthrough Milestone 1' width='' alt='Video Walkthrough' />
 
 ## Table of Contents
 1. [Overview](#Overview)
