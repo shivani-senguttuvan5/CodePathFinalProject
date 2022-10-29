@@ -48,8 +48,8 @@ The scope of the app is pretty well defined to the point where we can add comple
 
 **Required Must-have Stories/FEATURES**
 
-* User login
-* User Registration
+* - [x] User login 
+* - [x] User Registration
 * User can see posts (Stream)
 * User comment on posts
 * User can vote or like for a good posts
