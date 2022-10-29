@@ -4,6 +4,10 @@
 
 # Sharing Notes App
 
+##  Video Walkthrough Milestone 1
+
+<img src='http://g.recordit.co/BNM7aWtKFP.gif' title='Video Walkthrough Milestone 1' width='' alt='Video Walkthrough' />
+
 ## Table of Contents
 1. [Overview](#Overview)
 2. [Product Spec](#Product-Spec)
