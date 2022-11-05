@@ -138,7 +138,6 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
             let url = URL(string: urlString)!
             
             cell.photoView.af.setImage(withURL: url)
-            cell.numLikes.text = post["likeCount"] as? String //show current number of likes
             
             return cell
         
