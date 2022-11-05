@@ -4,6 +4,10 @@
 
 # Sharing Notes App
 
+##  Video Walkthrough Milestone 1
+
+<img src='http://g.recordit.co/6KGcC9pTI9.gif' title='Video Walkthrough Milestone 1' width='' alt='Video Walkthrough' />
+
 ## Table of Contents
 1. [Overview](#Overview)
 2. [Product Spec](#Product-Spec)
@@ -48,9 +52,14 @@ The scope of the app is pretty well defined to the point where we can add comple
 
 **Required Must-have Stories/FEATURES**
 
+<<<<<<< dev
 <<<<<<< Updated upstream
 * User login
 * User Registration
+=======
+* - [x] User login 
+* - [x] User Registration
+>>>>>>> main
 * User can see posts (Stream)
 * User comment on posts
 * User can vote or like for a good posts
