@@ -54,9 +54,9 @@ The scope of the app is pretty well defined to the point where we can add comple
 
 * - [x] User login 
 * - [x] User Registration
-* User can see posts (Stream)
-* User comment on posts
-* User can vote or like for a good posts
+* - [x] User can see posts (Stream)
+* - [x] User comment on posts
+* - [x] User can vote or like for a good posts
 * User can download notes 
 * User can track their studying progress
 * User can take picture of notes to post 
