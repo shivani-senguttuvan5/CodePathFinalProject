@@ -52,32 +52,17 @@ The scope of the app is pretty well defined to the point where we can add comple
 
 **Required Must-have Stories/FEATURES**
 
-<<<<<<< dev
-<<<<<<< Updated upstream
-* User login
-* User Registration
-=======
 * - [x] User login 
 * - [x] User Registration
->>>>>>> main
 * User can see posts (Stream)
 * User comment on posts
 * User can vote or like for a good posts
 * User can download notes 
 * User can track their studying progress
-=======
-* - [x] User login 
-* - [x] User Registration
-* - [x] User can see posts (Stream)
-* - [x] User comment on posts
-* - [] User can vote or like for a good posts
-* - [] User can download notes 
->>>>>>> Stashed changes
 * User can take picture of notes to post 
 
 **Optional Nice-to-have Stories/FEATURES**
 
-* User can track their studying progress
 * User can search for other courses at universities
 * User can setup their schedule (quizzes, exams, etc.)
 
