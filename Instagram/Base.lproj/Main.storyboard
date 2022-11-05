@@ -181,7 +181,7 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uix-R5-iZM" userLabel="Upvote">
+                                                <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uix-R5-iZM" userLabel="Like Button">
                                                     <rect key="frame" x="16" y="401.5" width="38" height="20.5"/>
                                                     <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
                                                     <color key="tintColor" red="0.17385674379999999" green="0.71995811300000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -190,8 +190,11 @@
                                                     <buttonConfiguration key="configuration" style="plain" image="hand.thumbsup">
                                                         <fontDescription key="titleFontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
                                                     </buttonConfiguration>
+                                                    <connections>
+                                                        <action selector="likedPost:" destination="aSh-9l-sGf" eventType="touchUpInside" id="cLO-h9-iC1"/>
+                                                    </connections>
                                                 </button>
-                                                <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qvw-Yx-GI9" userLabel="Downvote">
+                                                <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qvw-Yx-GI9" userLabel="Unlike Button">
                                                     <rect key="frame" x="81" y="401.5" width="38" height="20.5"/>
                                                     <color key="tintColor" red="0.17385674379999999" green="0.71995811300000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <state key="normal" title="Button"/>
@@ -236,7 +239,10 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="captionLabel" destination="QeE-kP-NXr" id="Xbf-dW-lvp"/>
+                                            <outlet property="likeButton" destination="Uix-R5-iZM" id="eY8-N5-CXG"/>
+                                            <outlet property="numLikes" destination="UgQ-G7-OEI" id="vu6-TH-oJX"/>
                                             <outlet property="photoView" destination="5Uq-ri-iiL" id="0Qk-qm-cyZ"/>
+                                            <outlet property="unlikeButton" destination="Qvw-Yx-GI9" id="kaM-32-ODu"/>
                                             <outlet property="usernameLabel" destination="2qV-PF-dSq" id="Tx1-vd-xYL"/>
                                         </connections>
                                     </tableViewCell>
