@@ -6,7 +6,7 @@
 
 ##  Video Walkthrough Milestone 1
 
-<img src='http://g.recordit.co/6KGcC9pTI9.gif' title='Video Walkthrough Milestone 1' width='' alt='Video Walkthrough' />
+![milestone2-Pod18](https://user-images.githubusercontent.com/99046066/200099497-af686d50-a359-448b-a893-6a12dc3c02b2.gif)
 
 ## Table of Contents
 1. [Overview](#Overview)
