@@ -11,6 +11,7 @@ import Parse
 class LoginViewController: UIViewController {
 
     @IBAction func onSignup(_ sender: Any) {
+        
         let user = PFUser()
         user.username = usernameField.text
         user.password = passwordField.text
@@ -40,6 +41,7 @@ class LoginViewController: UIViewController {
             }
         }
     }
+
     
     @IBOutlet weak var usernameField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
@@ -48,6 +50,9 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+    }
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+            self.view.endEditing(true)
     }
     
 
