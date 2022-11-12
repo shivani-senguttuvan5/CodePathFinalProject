@@ -57,9 +57,9 @@ The scope of the app is pretty well defined to the point where we can add comple
 * - [x] User can see posts (Stream)
 * - [x] User comment on posts
 * - [x] User can vote or like for a good posts
-* User can download notes 
-* User can track their studying progress
-* User can take picture of notes to post 
+* User can download notes (started)
+* User can track their studying progress (started)
+* User can take picture of notes to post (started)
 
 **Optional Nice-to-have Stories/FEATURES**
 
