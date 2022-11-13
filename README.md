@@ -4,7 +4,12 @@
 
 # Sharing Notes App
 
-##  Video Walkthrough Milestone 1
+##  Video Walkthrough Milestone 5
+![signupandprofile](https://user-images.githubusercontent.com/99046066/201547042-2746d24b-26d2-4f16-a50d-270a7a0370eb.gif)
+
+
+
+##  Video Walkthrough Milestone 4
 
 ![milestone2-Pod18](https://user-images.githubusercontent.com/99046066/200099497-af686d50-a359-448b-a893-6a12dc3c02b2.gif)
 
