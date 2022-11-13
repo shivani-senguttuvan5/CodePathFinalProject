@@ -131,7 +131,6 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
             let user = post["author"] as! PFUser
             
             cell.usernameLabel.text = user.username
-            
             cell.captionLabel.text = post["caption"] as! String
             
             let imageFile = post["image"] as! PFFileObject
@@ -139,7 +138,7 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
             let url = URL(string: urlString)!
             
             cell.photoView.af.setImage(withURL: url)
-            
+
             return cell
         
         } else if indexPath.row <= comments.count {
@@ -148,7 +147,7 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
             let comment = comments[indexPath.row - 1]
             
             cell.commentLabel.text = comment["text"] as? String
-            
+    
             let user = comment["author"] as! PFUser
             cell.nameLabel.text = user.username
             
@@ -162,8 +161,7 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let post = posts[indexPath.section]
         //comment object
-        let comments = (post["comments"] as? [PFObject]) ?? [] //makes a new comment table after saving an object like that
-        
+        let comments = (post["comments"] as? [PFObject]) ?? []; //makes a new comment table after saving an object like that
         if indexPath.row == comments.count + 1 {
             showsCommentBar = true
             becomeFirstResponder()

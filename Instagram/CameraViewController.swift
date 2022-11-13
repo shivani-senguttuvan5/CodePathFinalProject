@@ -20,6 +20,7 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
         
         post["caption"] = commentField.text!
         post["author"] = PFUser.current()!
+        post["likeCount"] = 0
         //PF supports: strings, numbers and "binary objects" and stored as URL (PFFile object used)
 
         
