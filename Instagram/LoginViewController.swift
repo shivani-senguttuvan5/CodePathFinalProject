@@ -10,21 +10,9 @@ import Parse
 
 class LoginViewController: UIViewController {
 
+    //if user click signup, transfer to the sign up user story
     @IBAction func onSignup(_ sender: Any) {
-        
-        let user = PFUser()
-        user.username = usernameField.text
-        user.password = passwordField.text
-        
-        user.signUpInBackground { (success, error) in
-            if success {
-                self.performSegue(withIdentifier: "loginSegue", sender: nil)
-        } else {
-            print( "Error: \(error?.localizedDescription)" )
-        }
-        
-    }
-        
+        self.performSegue(withIdentifier: "toSignUp", sender: nil)
     }
     
     

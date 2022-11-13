@@ -138,7 +138,7 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
             let url = URL(string: urlString)!
             
             cell.photoView.af.setImage(withURL: url)
-            
+
             return cell
         
         } else if indexPath.row <= comments.count {
@@ -147,7 +147,7 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
             let comment = comments[indexPath.row - 1]
             
             cell.commentLabel.text = comment["text"] as? String
-            
+    
             let user = comment["author"] as! PFUser
             cell.nameLabel.text = user.username
             

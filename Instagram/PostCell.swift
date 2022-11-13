@@ -40,7 +40,7 @@ class PostCell: UITableViewCell {
             unlikeButton.setImage(UIImage(named: "hand.thumbsdown"), for: UIControl.State.normal)
         }
     }
-    
+        
     @IBAction func likedPost(_ sender: Any) {
         let tobeLiked = !liked
         if (tobeLiked) {
